@@ -31,18 +31,7 @@ joined_file <- series_file %>% pivot_longer(
   names_to = "SampleID",  #Genes.
   values_to = "Gene_expression"  #Gene expression.
 )
-expression_file <- meta, GSE9476_new, by = "SampleID")  # First column.
-                                 
-========================================================================================================================
-# disease vs control
-control_count <-sum(meta_file$Disease_status == "Control")
-disease_count <- sum(meta_file$Disease_status == "AML")
-paste("Control:",control_count)
-paste("AML:",disease_count)
-#Genes
-gene_count<- nrow(series_file)
-paste("Gene count:", gene_count)
-
+expression_file <- meta_file, joined_file, by = "SampleID")  # First column.
 
 
 
