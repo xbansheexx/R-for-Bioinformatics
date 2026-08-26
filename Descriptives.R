@@ -71,4 +71,3 @@ find_min <- function(numbers) {
 find_range <- function(numbers) {
 # Subtract minimum value from maximum value
    return(find_max(numbers) - find_min(numbers))
-############################################################
